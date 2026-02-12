@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand Tracking Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Import map for Three.js and MediaPipe -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "./node_modules/three/build/three.module.js",
+                "three/addons/": "./node_modules/three/examples/jsm/",
+                "@mediapipe/tasks-vision": "./node_modules/@mediapipe/tasks-vision/vision_bundle.mjs"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div id="container">
+        <video id="webcam" autoplay playsinline></video>
+        <canvas id="output_canvas"></canvas>
+    </div>
+    <div id="loading">Initializing Computer Vision...</div>
+    <script type="module" src="renderer.js"></script>
+</body>
+
+</html>
